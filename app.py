@@ -138,14 +138,12 @@ recommend_button = st.button("🔥 Recommend")
 
 # ---------part 2----------------------
 
-api_key = "YOUR_TMDB_API_KEY"
+api_key = st.secrets["7c3354a1ed24ccce2b06814df86b9569"]
 
 # ----------------part 3------------
 # ---------------- POSTER FUNCTION ---------------- #
 
 def fetch_poster(movie_id):
-
-    api_key = "YOUR_TMDB_API_KEY"
 
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}&language=en-US"
 
@@ -170,7 +168,7 @@ if recommend_button:
         posters = []
 
         for i in range(5):
-         posters.append("https://via.placeholder.com/500x750?text=Movie")
+         posters.append(fetch_poster(movie_ids[i]))
 
     st.markdown("## 🍿 Recommended Movies")
 

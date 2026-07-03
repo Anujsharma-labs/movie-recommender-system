@@ -138,7 +138,7 @@ recommend_button = st.button("🔥 Recommend")
 
 # ---------part 2----------------------
 
-api_key = st.secrets["7c3354a1ed24ccce2b06814df86b9569"]
+api_key = st.secrets["TMDB_API_KEY"]
 
 # ----------------part 3------------
 # ---------------- POSTER FUNCTION ---------------- #
